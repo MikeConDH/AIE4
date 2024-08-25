@@ -12,6 +12,10 @@ def cosine_similarity(vector_a: np.array, vector_b: np.array) -> float:
     norm_b = np.linalg.norm(vector_b)
     return dot_product / (norm_a * norm_b)
 
+def euclidean_distance(vector_a: np.array, vector_b: np.array) -> float:
+    """Computes the euclidean distance between two vectors."""
+    print("GOOD TO GO")
+    return np.linalg.norm(vector_a - vector_b)
 
 class VectorDatabase:
     def __init__(self, embedding_model: EmbeddingModel = None):
